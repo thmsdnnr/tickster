@@ -38,8 +38,6 @@ window.onload = function() {
   let stockBox=document.querySelector('div#stockList');
   tickerBox.addEventListener('awesomplete-selectcomplete',submitStock);
   tickerBox.focus();
-  let tForm=document.querySelector('form#ticker')
-  tForm.addEventListener('submit', submitStock);
 
   function submitStock(e){
     e.preventDefault();
@@ -139,8 +137,11 @@ window.onload = function() {
     data: cData,
     options: {
       title: {
+          fontSize: 16,
+          fontFamily: "'Helvetica Neue', 'Helvetica', 'sans-serif'",
           display: true,
-          text: `Stock Closing Prices from ${cData.labels[0]} to ${cData.labels[cData.labels.length-1]}`
+          padding: 2,
+          text: `Closing Prices from ${cData.labels[0]} to ${cData.labels[cData.labels.length-1]}`
       },
         scales: {
             yAxes: [{

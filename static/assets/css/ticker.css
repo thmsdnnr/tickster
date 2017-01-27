@@ -5,28 +5,38 @@ html {
   box-sizing: inherit;
 }
 
-span.suggestion {
-  background-color: black;
-  color: white;
-}
-
-span.suggestion:hover {
-  background-color: tomato;
+body {
+  background-color: #F5F5F5;
 }
 
 div#pageContainer {
+  position: relative;
   width: 1080px;
   height: 600px;
   margin: auto;
   background-color: rgba(214,213,233,0.3);
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-
 }
 
 div#pageContainer h1 {
   font-family: 'Courier New', monospace;
   font-size: 2em;
   letter-spacing: 0.4em;
+  height: 10px;
+}
+
+span#info {
+  font-family: 'Courier New', monospace;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  height: 10px;
+}
+
+div#head {
+  position:reative;
+  height: auto;
+  padding: 0px;
+  margin: 4px;
 }
 
 div#stockContainer {
@@ -35,10 +45,8 @@ div#stockContainer {
    min-width: 460px;
    min-height: 284px;
    height: 500px;
-   margin: 10px auto 10px auto;
-   border: 1px solid tomato;
+   margin: 10px;
    padding: 5px;
-   margin: 0px auto 10px auto;
    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
    -webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */
@@ -47,7 +55,6 @@ div#stockContainer {
   outline: none;
   position: relative;
   float:right;
-  border: 1px solid black;
  }
 
 div#controls {
@@ -56,13 +63,13 @@ div#controls {
   flex-flow: row wrap;
   width: 250px;
   height: auto;
-  margin: auto;
+  margin: 10px;
   padding: 10px;
-  justify-content: space-between;
-  border: 1px dotted orange;
+  justify-content: center;
+  text-align: center;
   z-index: 1;
-  background-color: rgba(123,124,132,0.6);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  background-color: rgba(237, 231, 246, 0.4);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(209,196,233,0.23);
 }
 
 canvas#stockGraph{
@@ -78,17 +85,21 @@ canvas#stockGraph{
 
 div#stockList {
   flex: 0 1 auto;
-  float:right;
   display: inline-block;
-  width: 200px;
+  text-align: center;
+  justify-content: center;
+  width: auto;
   max-width: 400px;
   max-height: 500px;
   height: auto;
   font-family: 'Courier New', monospace;
-  text-align: left;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  margin-right: 10px;
 }
+
+div#stockList span:hover {
+  border: 2px dotted red;
+}
+
 
 div#ticker {
   flex: 0 1 auto;
@@ -98,25 +109,12 @@ div#ticker {
   font-family: 'Courier New', monospace;
 }
 
-span#msg {
-  flex: 0 1 auto;
-  display: inline;
-  float: right;
-  width: 400px;
-  height: auto;
-  font-family: 'Courier New', monospace;
-  font-size: 1em;
-}
-
 input#tickerSymbol{
   width: 180px;
   height: auto;
   font-family: 'Courier New', monospace;
   font-size: 1em;
-}
-
-div#stockList span:hover {
-  background-color: tomato;
+  outline: none;
 }
 
 span#demoFooter {
@@ -124,16 +122,41 @@ span#demoFooter {
   text-align: left;
   width: auto;
   margin: auto;
-  font-size: 1em;
+  font-size: 0.9em;
   font-family: 'Courier New', monospace;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2em;
   color: black;
-  position: fixed;
-  left: 4px;
-  bottom: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+span#name {
+  text-shadow: 2px 2px 5px rgba(222, 162, 125, 0.68);
+}
+
+span#name:hover {
+  text-shadow: 2px 2px 2px rgba(222, 162, 125, 0.68),
+                3px 3px 2px rgba(122, 62, 125, 0.68),
+                  5px 5px 2px rgba(22, 12, 25, 0.68);
+  transition: all 400ms ease-in-out;
 }
 
 span#demoFooter a {
   color: green;
   background-color: rgba(0,0,0,0);
+}
+
+button#saveImg {
+  font-family: 'Courier New', monospace;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  padding: 5px;
+  width: 180px;
+  height: 30px;
+}
+
+button#saveImg:hover {
+  color: red;
+  font-size: 1.0em;
 }

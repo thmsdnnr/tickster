@@ -11,20 +11,18 @@
 </head>
 <body>
   <div id="pageContainer">
-    <h1>TICKSTER</h1>  <% include ../static/includes/demoFooter.ejs %>
+    <div id="head"><h1>∧∞<span id="name">TICKSTER</span>∞∧</h1><br />
+      <span id="info">You see what others see, really. Open another browser, make a change, and switch back. MAGIC!</span>
+    </div>
     <div id="controls">
       <div id="ticker">
-        <form id="ticker">
           <input class="awesomeplete" type="text" placeholder="Enter a Stock" id="tickerSymbol">
-          <input type="submit" style="display:none">
-        </form>
         <button id="saveImg">SAVE IMAGE</button>
         </div>
       <div id="stockList"></div>
     </div>
-  <div id="stockContainer">
-    <canvas id="stockGraph" width="800" height="500"></canvas>
-  </div>
+  <div id="stockContainer"><canvas id="stockGraph" width="800" height="500"></canvas></div>
+    <% include ../static/includes/demoFooter.ejs %>
 </div>
 </body>
 </html>
