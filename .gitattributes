@@ -1,0 +1,3 @@
+/static/assets/css* linguist-vendored
+/static/includes* linguist-vendored
+/views* linguist-vendored
