@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>TICKSTER</title>
+<script>window.INITIAL_STATE = <%-JSON.stringify(data)%></script>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.js"></script>
+<script type="text/javascript" src="/assets/js/awesomplete.js"></script>
+<script type="text/javascript" src="/assets/js/ticker.js"></script>
+<link rel="stylesheet" type="text/css" href="/assets/css/ticker.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/awesomplete.css">
+</head>
+<body>
+  <div id="pageContainer">
+    <h1>TICKSTER</h1>  <% include ../static/includes/demofooter.ejs %>
+    <div id="controls">
+      <div id="ticker">
+        <form id="ticker">
+          <input class="awesomeplete" type="text" placeholder="Enter a Stock" id="tickerSymbol">
+          <input type="submit" style="display:none">
+        </form>
+        <button id="saveImg">SAVE IMAGE</button>
+        </div>
+      <div id="stockList"></div>
+    </div>
+  <div id="stockContainer">
+    <canvas id="stockGraph" width="800" height="500"></canvas>
+  </div>
+</div>
+</body>
+</html>
